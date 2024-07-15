@@ -3,7 +3,7 @@
 on:
   push:
     branches:
-      - main  # Cambia esto si tu rama principal tiene otro nombre
+      - master  # Cambia esto si tu rama principal tiene otro nombre
 
 jobs:
   build-and-deploy:
