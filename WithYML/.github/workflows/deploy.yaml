@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Cambia esto si tu rama principal tiene otro nombre
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -27,10 +28,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/wwwroot       
-
-    - name: Create .nojekyll file
-      run: echo " " > ./build/wwwroot/.nojekyll
-
-    - name: Create 404.html
-      run: cp ./build/wwwroot/index.html ./build/wwwroot/404.html
+        publish_dir: ./build/wwwroot
